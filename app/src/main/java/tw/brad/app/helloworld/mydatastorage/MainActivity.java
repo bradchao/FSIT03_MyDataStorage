@@ -103,10 +103,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void test5(View view){
-        
+        File file = new File(sdroot, "file1.txt");
+        try {
+            FileOutputStream fout = new FileOutputStream(file);
+            fout.write("OK".getBytes());
+            fout.flush();
+            fout.close();
+        }catch(Exception e){
+            Log.i("brad", e.toString());
+        }
     }
     public void test6(View view){
-
+        File file = new File(approot, "file1.txt");
+        try {
+            FileOutputStream fout = new FileOutputStream(file);
+            fout.write("OK".getBytes());
+            fout.flush();
+            fout.close();
+        }catch(Exception e){
+            Log.i("brad", e.toString());
+        }
     }
 
 
